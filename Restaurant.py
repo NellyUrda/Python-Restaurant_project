@@ -5,17 +5,20 @@ from tkinter import *
 def exit():
     window.destroy()
 
-
+# we store all the items and prices from menu in dictionarys
 pasta = {'fusilli': 4.20, 'penne rigate': 4.20, 'tagliatele': 4.20, 'soaghete': 4.20}
 salsa = {'aglio e olio': 5.0, 'arrabiata': 5.1, 'pesto': 3.5, 'carbonara': 4.5}
 dessert = {'icecream': 3.0, 'tiramisu': 4.3}
 beverage = {'tea': 2.0, 'coffee': 2.5, 'wine': 3.0}
+
 item1 = item2 = item3 = item4 = 0
 
+# Pay button
+# choose the items from menu and calculate the total price to pay
 def pay():
     for (key, value) in pasta.items():
         if key == pasta_choice.get():
-            global item1  # trebuie sa punem global pt a preciza ca folosesc variabila item1 ce am declarat-o sus
+            global item1  
             item1 = value
     for (key, value) in salsa.items():
         if key == salsa_choice.get():
@@ -31,7 +34,7 @@ def pay():
             item4 = value
     tkinter.messagebox.showinfo(message="Total to pay: " + str(item1 + item2 + item3 + item4))
 
-
+# GUI for menu page
 window = Tk()
 
 window.geometry("730x400")
