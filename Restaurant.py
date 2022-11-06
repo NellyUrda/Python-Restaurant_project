@@ -6,9 +6,9 @@ def exit():
     window.destroy()
 
 # we store all the items and prices from menu in dictionarys
-pasta = {'fusilli': 4.20, 'penne rigate': 4.20, 'tagliatele': 4.20, 'soaghete': 4.20}
+pasta = {'fusilli': 4.20, 'penne rigate': 4.20, 'tagliatele': 4.20, 'spaghetti': 4.20}
 salsa = {'aglio e olio': 5.0, 'arrabiata': 5.1, 'pesto': 3.5, 'carbonara': 4.5}
-dessert = {'icecream': 3.0, 'tiramisu': 4.3}
+dessert = {'icecream  ': 3.0, 'tiramisu': 4.3}
 beverage = {'tea': 2.0, 'coffee': 2.5, 'wine': 3.0}
 
 item1 = item2 = item3 = item4 = 0
@@ -38,7 +38,7 @@ def pay():
 window = Tk()
 
 window.geometry("730x400")
-window.config(bg="gray")  # windows color
+window.config(bg="gray") 
 
 title_label = Label(window,
                     text="Italian restaurant",
@@ -80,7 +80,7 @@ beverage_label = Label(window,
                        activebackground="gray")
 beverage_label.place(x=530, y=50, width=150, height=30)
 
-pasta_choice = StringVar(value=" ")  # pt ca sa nu apara toate butoanele selectate deodata
+pasta_choice = StringVar(value=" ") 
 fusilli_rb = Radiobutton(window,
                          text="fusilli",
                          variable=pasta_choice,
@@ -106,9 +106,9 @@ tagliatele_rb = Radiobutton(window,
 tagliatele_rb.place(x=50, y=190, width=150, height=30)
 
 spaghete_rb = Radiobutton(window,
-                          text="spaghete",
+                          text="spaghetti",
                           variable=pasta_choice,
-                          value="spaghete",
+                          value="spaghetti",
                           font=("Ariel", 12),
                           bg="#dbde97")
 spaghete_rb.place(x=50, y=240, width=150, height=30)
